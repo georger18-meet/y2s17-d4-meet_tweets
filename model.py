@@ -8,7 +8,6 @@ Base = declarative_base()
 class Tweet(Base):
     __tablename__  = 'tweet'
     id             = Column(Integer, primary_key=True)
-    user           = Column(String(60))
     text           = Column(String(140))
     picture_url    = Column(String(140))
     created_at     = Column(DateTime, default=datetime.datetime.now())
