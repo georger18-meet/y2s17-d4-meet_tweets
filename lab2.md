@@ -1,7 +1,8 @@
-MEET Friends Lab 2: Building the Flask backend for viewing friends
-------------------------------------------------------------------
+# Tweet @MEET Lab 2: Building the Flask backend for viewing friends
 
-**Important:** This lab relies on successfully completed code for [MEET Tweets Lab 1](https://github.com/meet-projects/y2s17-d4-meet_tweets/blob/master/lab1.md). You should have a folder `y2s17-d4-meet_tweets`.
+**Important:** This lab relies on successfully completed code for [Tweet @MEET Lab 1](https://github.com/meet-projects/y2s17-d4-meet_tweets/blob/master/lab1.md). You should have a folder `y2s17-d4-meet_tweets`.
+
+### 1. Exercises
 
 #### Exercise 1
 
@@ -9,7 +10,12 @@ In `templates/my_feed.html`, notice that we've actually omitted something import
 
 #### Exercise 2
 
-In terminal, go to the folder `y2s27-d4-meet_tweets`, enter the virtual environment with `virtualenv venv', and execute the command `flask run`. This should run without error. Leave this continuously running (it's a server!).
+In terminal, run the server by executing the following command:
+```
+flask run
+```
+
+This should run without error. Leave this continuously running (it's a server!).
 
 Now open your browser and go to `http://127.0.0.1:5000/` (this is the default URL for where Flask runs your web app) and you should see the content that is in `my_feed.html` (but notice how `my_feed.html` doesn't appear anywhere in the URL!). Similarly, if you go to `http://127.0.0.1:5000/add` in your browser, you should see the content that is in `add_tweet.html`.
 
@@ -18,3 +24,14 @@ Now open your browser and go to `http://127.0.0.1:5000/` (this is the default UR
 We've already imported the relevant portions of SQLAlchemy for you into the Python file `app.py`.
 
 In the function `my_feed()`, change the first line so that it actually reads all the tweets from the database into the variable `tweets`. After completing this exercise, when you go to `http://127.0.0.1:5000/` in your web browser, you should see a list of all the tweets you added to the database earlier.
+
+#### Exercise 4
+
+Pusblish the website to internet.
+OPEN A NEW TERMINAL WIHTOUT CLOSING THE OLD TERMINAL. Then copy past the following code
+```
+cd ~/Desktop/y2s17-d4-meet_tweets/
+source publish.sh
+```
+
+You will have access to the forwarding URL on your mobile.
