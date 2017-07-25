@@ -21,7 +21,7 @@ Some of the templates are incomplete, let's fix them with the following exercise
 #### Exercise 1
 
 In `add_tweet.html`, we've created a form but there's nothing inside. Please add the following input fields inside the form:
-* A textarea, with `name="text"`, to enter the tweet's text.
+* A textarea, with `name="text"`, to enter the tweet's text (hint: textarea is its own tag)
 * A text field, with `name="picture_url"`, to add a picture if needed. 
 * A checkbox, with `name="show_location"`, `value="true"` and that is checked by default.
 * A text field, with `name="location"` to enter the location.
@@ -29,7 +29,7 @@ In `add_tweet.html`, we've created a form but there's nothing inside. Please add
 
 #### Exercise 2
 
-Switch driver (the person who type on the keyboard) / observer (the person who reviews the code).
+Switch driver.
 In `edit_tweet.html`, there is again an incomplete form that you need to add inputs to. 
 Add the same inputs as for `add_tweet.html`. However, this time, we'll need to make some minor edits:
 
