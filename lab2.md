@@ -25,7 +25,7 @@ We've already imported the relevant portions of SQLAlchemy for you into the Pyth
 
 In the function `my_feed()`, change the first line so that it actually reads all the tweets from the database into the variable `tweets`. After completing this exercise, when you go to `http://127.0.0.1:5000/` in your web browser, you should see a list of all the tweets you added to the database earlier.
 
-#### Exercise 4
+### 2.  Publish your website
 
 Pusblish the website to internet.
 OPEN A NEW TERMINAL WIHTOUT CLOSING THE OLD TERMINAL. Then copy past the following code
