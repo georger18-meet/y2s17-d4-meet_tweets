@@ -2,17 +2,10 @@
 
 ### 1. Intro
 In this lab, we are going to create the different webpages in the Tweet @MEET web app.
-Our main focus will be to make sure that the basic functionalities of each pages work *except for the links and the style*.
+Our main focus will be to make sure that the basic functionalities of each of the pages work *except for the links and the style*.
 We will take care of these two points in one of the next lab.
 
 ### 2. Get familiar with the app
-
-- Clone the repository on the Desktop with the following command:
-
-```
-cd ~/Desktop
-git clone git@github.com:meet-projects/y2s17-d4-meet_tweets.git
-```
 
 - Open the app folder <i>y2s17-d4-meet_tweets</i> and get familiar with the HTML Templates.
 
