@@ -1,3 +1,7 @@
 #container {
   background-color:lightblue;
 }
+
+.tweet-img {
+  width: 300px;
+}
