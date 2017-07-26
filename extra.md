@@ -1,25 +1,34 @@
-MEET Friends Lab 5: Default value for radio buttons and styling with CSS/Bootstrap
-----------------------------------------------------------------------------------
+# Tweet @MEET Extra : CSS, Bootstrap & Extra
 
-**Important:** This lab relies on successfully completed code for [MEET Friends Lab 4](https://github.com/meet-projects/y2-meet-friends/blob/master/lab4.md). You should have a folder `y2-meet-friends`. Also, after running your Flask app, remember that you go to your Flask website by going to: `http://127.0.0.1:5000/`
+### 1. Publish your website
 
-As a reminder, if you have not set up Python using the commands below, please do so now:
-
+Pusblish the website to internet.
+OPEN A NEW TERMINAL WIHTOUT CLOSING THE OLD TERMINAL. Then copy past the following code
 ```
-wget http://tinyurl.com/MEETpythonY2
-source MEETpythonY2
-```
-
-If you have already run the code above but you've opened a new terminal window, please run:
-
-```
-source ~/y2-venv/bin/activate
+cd ~/Desktop/y2s17-d4-meet_tweets/
+source publish.sh
 ```
 
-#### Exercise 1
+### 2. Extra
 
-Make it so that the "edit friend" page automatically selects the current gender of the friend when you load the webpage
+#### Extra 1
 
-#### Exercise 2
+Add some CSS in `static/style.css` in order to make the four pages user friendly.
 
-Add `<head>` and `</head>` tags at the top of each of the four HTML files, where enclosed within the head tags, there are two stylesheet references, one to Bootstrap, and one to `style.css` that we have provided in the `static` folder (look at the lecture notes for how to obtain the URL of this stylesheet using `url_for`!). After adding these two stylesheet references to the four HTML files, you should find that all four pages now use Bootstrap and that there is a sticky footer on all the pages.
+If you server is not already running, run this command to start your server:
+```
+flask run
+```
+
+#### Extra 2
+
+Research `Bootstrap` on internet and try to add it and use it on our web app.
+Hint to add bootstrap to a HTML page:
+```
+<link rel="stylesheet" href="<ENTER_BOOTSTRAP_CDN_URL>">
+```
+
+#### Extra 3
+
+You have decided that the Tweet @MEET webapp should actually take login information so that 
+anyone can log in and see their own feed of tweets. Figure out how to do this.
