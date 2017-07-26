@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <head>
+      <title>My Tweet Feed</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
   <body>
 
-    <div class="container">
-      <div class="page-header">
+    <div id="container">
+      <div id="page-header">
         <h1>Tweet @MEET</h1>
         <h2>My feed</h2>
       </div>
       
-      <div class="main">
+      <div id="main">
         <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Publish a tweet</a>
-        <div class="tweet-container">
-          <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
-          <div class="tweet-body">
-            <img src="{{tweet.picture_url}}" alt="picture-{{tweet.id}}">
-            <div class="tweet-text">{{tweet.text}}</div>
+        {% for tweet in tweets %}
+          <div class="tweet-container">
+            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
+            <div class="tweet-body">
+              <img src="{{tweet.picture_url}}" alt="picture-{{tweet.id}}">
+              <div class="tweet-text">{{tweet.text}}</div>
+            </div>
+            <div class="tweet-footer">
+              <div class="tweet-user">{{tweet.created_at}}</div>
+              <div class="tweet-user">{{tweet.location}}</div>
+              <div class="tweet-user">{{tweet.favorite_count}}</div>
+            </div>
           </div>
-          <div class="tweet-footer">
-            <div class="tweet-user">{{tweet.created_at}}</div>
-            <div class="tweet-user">{{tweet.location}}</div>
-            <div class="tweet-user">{{tweet.favorite_count}}</div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
+      
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-footer-custom">Y2 Flask Intro</p>
-      </div>
+    <footer id="page-header">
+      <p class="text-muted text-footer-custom">Y2 Flask Intro</p>
     </footer>
 
   </body>

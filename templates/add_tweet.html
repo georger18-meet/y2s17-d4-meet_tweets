@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <head>
+      <title>Add Tweet</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
   <body>
 
-    <div class="container">
-      <div class="page-header">
+    <div id="container">
+      <div id="page-header">
         <h1>Tweet @MEET</h1>
-        <h2>My feed</h2>
+        <h2>Add tweet</h2>
       </div>
 
       <form action="BROKEN-LINK-FIX-ME" method="post">
-      <!-- MISSING FORM HERE -->
+        <textarea name="text" placeholder="Enter your tweet here.."></textarea><br>
+        <input type="text" name="picture_url" placeholder="Enter picture URL"><br><br>
+        <input type="checkbox" name="show_location" value="true">Display location<br>
+        <input type="text" name="location" placeholder="Location"><br><br>
+        <input type="submit">
       </form>
 
       <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Cancel</a>
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-footer-custom">Y2 Flask Intro</p>
-      </div>
+      <p class="text-muted text-footer-custom">Y2 Flask Intro</p>
     </footer>
 
   </body>
