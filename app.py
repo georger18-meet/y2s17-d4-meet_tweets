@@ -29,7 +29,7 @@ def edit_tweet(tweet_id):
     return render_template('edit_tweet.html', tweet=tweet)
 
 
-@app.route('/delete/<int:tweet_id')
+@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX')
 def delete_tweet(tweet_id):
     if request.method == 'GET':
       tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
