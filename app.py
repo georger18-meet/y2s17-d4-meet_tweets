@@ -30,7 +30,7 @@ def edit_tweet(tweet_id):
         return render_template("edit_tweet.html", tweet=tweet)
     else:
       # read form data
-      new_text          = request.form.get('name')
+      new_text          = request.form.get('text')
       new_picture_url   = request.form.get('picture_url')
       new_show_location = request.form.get('show_location')
       new_location      = request.form.get('location')
