@@ -23,17 +23,25 @@ def add_tweet():
     return render_template('add_tweet.html')
 
 
-@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX')
+@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX', methods=['GET', 'POST'])
 def edit_tweet(tweet_id):
     tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
-    return render_template('edit_tweet.html', tweet=tweet)
-
-
-@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX')
-def delete_tweet(tweet_id):
     if request.method == 'GET':
-      tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
-      return render_template('delete_tweet.html', tweet=tweet)
+        return render_template("edit_tweet.html", tweet=tweet)
     else:
-      # DELETE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
-      return redirect(url_for('my_feed')) 
+      # read form data
+      new_text          = request.form.get('name')
+      new_picture_url   = request.form.get('picture_url')
+      new_show_location = request.form.get('show_location')
+      new_location      = request.form.get('location')
+
+      # MISSING CODE HERE FOR UPDATING THE TWEET
+        
+      # redirect user to the page that views all tweets
+      return redirect(url_for('my_feed'))
+
+
+@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX', methods=['GET', 'POST'])
+def delete_tweet(tweet_id):
+    tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
+    return render_template('delete_tweet.html', tweet=tweet)
