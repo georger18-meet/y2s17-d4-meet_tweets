@@ -23,9 +23,10 @@ def add_tweet():
     return render_template('add_tweet.html')
 
 
-@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX', methods=['GET', 'POST'])
+@app.route('/edit/<int:tweet_id>', methods=['GET', 'POST'])
 def edit_tweet(tweet_id):
-    tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
+    # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
+    tweet = session.query(Tweet).filter_by(id=tweet_id).first()
     if request.method == 'GET':
         return render_template("edit_tweet.html", tweet=tweet)
     else:
@@ -36,12 +37,15 @@ def edit_tweet(tweet_id):
       new_location      = request.form.get('location')
 
       # MISSING CODE HERE FOR UPDATING THE TWEET
-        
+      tweet.text=new_text
+      tweet.picture_url=new_picture_url
+      tweet.show_location=new_show_location
+      tweet.location=new_location
       # redirect user to the page that views all tweets
       return redirect(url_for('my_feed'))
 
 
-@app.route('/BROKEN-ROUTE-FOR-YOU-TO-FIX', methods=['GET', 'POST'])
+@app.route('/delete/<int:tweet_id>', methods=['GET', 'POST'])
 def delete_tweet(tweet_id):
-    tweet = # RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
+    tweet = session.query(Tweet).filter_by(id=tweet_id).first()# RETRIEVE TWEET THAT HAVE id=tweet_id FROM THE DATABASE
     return render_template('delete_tweet.html', tweet=tweet)

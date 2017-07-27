@@ -13,10 +13,10 @@
       </div>
       
       <div id="main">
-        <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Publish a tweet</a>
+        <a href="{{ url_for('add_tweet')}}" class="btn btn-info" role="button">Publish a tweet</a>
         {% for tweet in tweets %}
           <div class="tweet-container">
-            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
+            <a href="{{ url_for('edit_tweet',tweet_id=tweet.id) }}" class="btn btn-info" role="button">Edit</a>
             <div class="tweet-body">
               <img class="tweet-img" src="{{tweet.picture_url}}" alt="picture-{{tweet.id}}">
               <div class="tweet-text">{{tweet.text}}</div>

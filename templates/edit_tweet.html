@@ -20,8 +20,8 @@
         <input type="submit">
       </form>
 
-      <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Cancel</a>
-      <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Delete Tweet</a>
+      <a href="{{ url_for('my_feed') }}" class="btn btn-info" role="button">Cancel</a>
+      <a href="{{ url_for('delete_tweet',tweet_id=tweet.id')}}" class="btn btn-info" role="button">Delete Tweet</a>
     </div>
 
     <footer class="footer">
